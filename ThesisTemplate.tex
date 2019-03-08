@@ -1,0 +1,112 @@
+\documentclass[12pt,oneside]{book}
+\include{preamble} % Dont delete this line...This holds your required packages and settings..
+
+\thesistitle{Your Title of the Thesis} % This title will be references many places such as footer, title and certificate pages
+
+\begin{document}
+{\setstretch{1.5}
+\input{contents/titlepage.tex}
+
+\pagenumbering{roman}
+\clearpage 
+
+\titleformat{name=\chapter, numberless}[display]{ \color{sec}\sffamily\huge\bfseries}{\centering\includegraphics[scale=.6]{mu_logo} }{0.5ex} %
+{	\titlerule[1pt]
+	\vspace{1ex}%
+	#1\filcenter
+	\addcontentsline{toc}{chapter}{#1}
+	\markboth{}{#1}\\
+	\vspace{1ex}%
+	\titlerule[3pt]}
+
+\input{contents/declaration.tex}
+
+\input{contents/certificate.tex}
+
+	\titleformat{name=\chapter, numberless}[display]{ \color{sec}\sffamily\huge\bfseries}{}{0.5ex} %
+	{	\titlerule[1pt]
+		\vspace{1ex}%
+		#1\filcenter
+		\addcontentsline{toc}{chapter}{#1}
+		\markboth{}{#1}\\
+		\vspace{1ex}%
+		\titlerule[3pt]}
+	
+\input{contents/abstract.tex}
+%
+\input{contents/acknowledgments.tex}
+
+\titleformat{name=\chapter, numberless}[display]{ \color{sec}\sffamily\huge\bfseries}{}{0.5ex} %
+{	\titlerule[1pt]
+	\vspace{1ex}%
+	#1\filcenter
+	\markboth{}{#1}\\
+	\vspace{1ex}%
+	\titlerule[3pt]}
+
+\tableofcontents
+
+\titleformat{name=\chapter, numberless}[display]{ \color{sec}\sffamily\huge\bfseries}{}{0.5ex} %
+{	\titlerule[1pt]
+	\vspace{1ex}%
+	#1\filcenter
+	\addcontentsline{toc}{chapter}{#1}
+	\markboth{}{#1}\\
+	\vspace{1ex}%
+	\titlerule[3pt]}
+
+\listoffigures 
+
+\listoftables 
+
+\clearpage 
+
+\input{contents/abbreviation.tex}
+
+
+\input{contents/physicalconstants.tex}
+
+\input{contents/listofsymbols.tex}
+
+
+\dedicatory{Dedicated to  my Mother\\[1cm]
+\textbf{Ms. Elizebeth Rani}}
+\clearpage 
+}
+
+
+
+
+\pagenumbering{arabic}
+
+
+
+
+\input{chapters/chapter1.tex}
+
+
+\input{chapters/chapter2.tex}
+
+\input{chapters/chapter3.tex}
+
+\input{chapters/chapter4.tex}
+
+\input{chapters/summary_future_scope}
+
+
+\begin{appendices}
+\input{Appendices/AppendixA}
+
+\end{appendices}
+
+\fancyhead{}
+\fancyhead[R]{\nouppercase\leftmark}
+
+\printbibliography[title={References}]
+
+\clearpage 
+\sectionmark{\emph{Subject Index}}
+%\addcontentsline{toc}{chapter}{Subject Index}
+\printindex
+
+\end{document}
