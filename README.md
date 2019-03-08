@@ -1,2 +1,2 @@
-# DavidThesis
-This contains my thesis.. But the bibliography is outside this repo.
+# Thesis Template
+This repository contains a simple thesis template. 
